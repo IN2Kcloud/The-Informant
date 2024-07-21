@@ -4,7 +4,7 @@
 a{color:#000;}
 
 body{-webkit-font-smoothing:antialiased;}
-body{margin:0;padding:0;overflow-x:hidden;font-family:'Vogue', 'Times New Roman','Noto Sans KR','sans-serif';font-size:0.8rem;font-weight:400;line-height:1.4em;color:#171010;background:#f1f1f1;cursor: none;}
+body{margin:0;padding:0;overflow-x:hidden;font-family:"PP Neue Montreal", 'Times New Roman','Noto Sans KR','sans-serif';font-size:0.8rem;font-weight:400;line-height:1.4em;color:#171010;background:#f1f1f1;cursor: none;}
 
 .circleII {height: 24px; width: 24px; border-radius: 24px; background-color: black;position: fixed;top: 0; left: 0; pointer-events: none; z-index: 99999999; /* so that it stays on top of all other elements */} 
 
