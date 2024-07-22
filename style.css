@@ -15,7 +15,7 @@ body{margin:0;padding:0;overflow-x:hidden;font-family:"PP Neue Montreal", 'Times
 section{width:100%;height:100%;overflow:hidden;} .section-con{width:100%;height:100%;display:flex; /*flex-direction:column;*/ align-items:center; justify-content:center; overflow-x:hidden;} 
 .section-inner{width:90%;max-width:1200px;}.section-inner-con{font-size:1.5rem; width:100%;margin:0rem 0;} .section-inner-con p{margin:0.7rem 0;} 
 .section-I {height:fit-content; position: absolute; top:5%;} .section-con{width:100%;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:flex-start;overflow-x:hidden;} .section-inner{width:90%;max-width:1200px;}.section-inner-con{width:100%;margin:0.7rem 0;} .section-inner-con p{margin:0.7rem 0;}
-.main-copy{display:flex;white-space:nowrap;overflow:hidden;z-index:1;padding-top:3rem;margin-top:50px;} .main-copy-wrap{font-weight:100;color:#000;font-family:'Old London','Blackout','Times New Roman';font-size:6rem;letter-spacing:0;line-height:1em;padding-right:0.3em;animation:textLoop 24s linear infinite;min-width:100px;min-height:50px;flex-shrink:0;}
+.main-copy{display:flex;white-space:nowrap;overflow:hidden;z-index:1;padding-top:3rem;margin-top:50px;} .main-copy-wrap{font-weight:100;color:#000;font-family:'Old London', "PP Neue Montreal",'Times New Roman';font-size:6rem;letter-spacing:0;line-height:1em;padding-right:0.3em;animation:textLoop 24s linear infinite;min-width:100px;min-height:50px;flex-shrink:0;}
 @keyframes textLoop{from{transform:translateX(0%);}to{transform:translateX(-100%);}}
 .main-key-wrap{font-size:1.6rem;line-height:1.2em;}.main-con-wrap{font-size:2rem;line-height:1.2em;}
 
