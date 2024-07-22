@@ -3,7 +3,7 @@
 *{margin:0;padding:0;border:0;box-sizing:border-box; cursor: none;}
 a{color:#000;}
 
-body{-webkit-font-smoothing:antialiased;}
+body{width: 100vw; overflow-x: hidden; -webkit-font-smoothing:antialiased;}
 body{margin:0;padding:0;overflow-x:hidden;font-family:"PP Neue Montreal", 'Times New Roman','Noto Sans KR','sans-serif';font-size:0.8rem;font-weight:400;line-height:1.4em;color:#171010;background:#f1f1f1;cursor: none;}
 
 .circleII {height: 24px; width: 24px; border-radius: 24px; background-color: black;position: fixed;top: 0; left: 0; pointer-events: none; z-index: 99999999; /* so that it stays on top of all other elements */} 
@@ -15,7 +15,7 @@ body{margin:0;padding:0;overflow-x:hidden;font-family:"PP Neue Montreal", 'Times
 section{width:100%;height:100%;overflow:hidden;} .section-con{width:100%;height:100%;display:flex; /*flex-direction:column;*/ align-items:center; justify-content:center; overflow-x:hidden;} 
 .section-inner{width:90%;max-width:1200px;}.section-inner-con{font-size:1.5rem; width:100%;margin:0rem 0;} .section-inner-con p{margin:0.7rem 0;} 
 .section-I {height:fit-content; position: absolute; top:5%;} .section-con{width:100%;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:flex-start;overflow-x:hidden;} .section-inner{width:90%;max-width:1200px;}.section-inner-con{width:100%;margin:0.7rem 0;} .section-inner-con p{margin:0.7rem 0;}
-.main-copy{display:flex;white-space:nowrap;overflow:hidden;z-index:1;padding-top:3rem;margin-top:50px;} .main-copy-wrap{font-weight:100;color:#000;font-family:'Old London', "PP Neue Montreal",'Times New Roman';font-size:6rem;letter-spacing:0;line-height:1em;padding-right:0.3em;animation:textLoop 24s linear infinite;min-width:100px;min-height:50px;flex-shrink:0;}
+.main-copy{display:flex; width: 100vw; overflow: hidden; white-space:nowrap;overflow:hidden;z-index:1;padding-top:3rem;margin-top:50px;} .main-copy-wrap{font-weight:100;color:#000;font-family:'Old London','Blackout','Times New Roman';font-size:8rem;letter-spacing:0;line-height:1em;padding-right:0.3em;animation:textLoop 24s linear infinite;min-width:100px;min-height:50px;flex-shrink:0; overflow: hidden;}
 @keyframes textLoop{from{transform:translateX(0%);}to{transform:translateX(-100%);}}
 .main-key-wrap{font-size:1.6rem;line-height:1.2em;}.main-con-wrap{font-size:2rem;line-height:1.2em;}
 
@@ -36,7 +36,7 @@ section{width:100%;height:100%;overflow:hidden;} .section-con{width:100%;height:
 .t-stroke-x{font-size:3vh;color:#000;letter-spacing:4px;text-transform: uppercase;} 
 .t-stroke-white{font-size: 15vh; color: transparent; -webkit-text-stroke: 3px #000; /* Stroke width and color  text-shadow:-3px -3px 0 #000, 3px -3px 0 #000, -3px  3px 0 #000, 3px  3px 0 #000;*/ letter-spacing: 4px; text-transform: uppercase;}
 .t-stroke-black{font-size:15vh;color:#000;letter-spacing:4px;text-transform: uppercase;} 
-@font-face{font-family:'Old London';src:url('Media/Olondona.otf') format('opentype');font-display:swap;}
+@font-face{font-family:'Old London';src:url('Olondona.otf') format('opentype');font-display:swap;}
 @font-face{font-family:'Vogue';src:url('Vogue.ttf') format('truetype');font-display:swap;}
 
 .img-wrapper{ position: absolute; left: -7vw; top: -10vw; width: 15vw; height: 22vw; overflow: hidden; pointer-events: none; z-index: 10; /*border-radius: 50%;*/ mix-blend-mode: difference; visibility: hidden; transform: scale(0.3);}
@@ -60,7 +60,7 @@ section{width:100%;height:100%;overflow:hidden;} .section-con{width:100%;height:
 @media (orientation:portrait){
     #nav a{font-size: 3vw;font-weight: 300;}   
     .section-con{height:fit-content;}
-    .section-1 {height:5vh; margin-top: 10vh; top:8%;}
+    .section-1 {height:6vh; margin-top: 10vh; top:8%;}
     .section-inner-II{align-items: center;}
     .t-left{font-size: 4vw; } .t-right{font-size: 4vw; } .t-center{font-size: 4vw; }
     .team-copy{margin-right: 0px;margin-left: 0px;}
@@ -71,7 +71,6 @@ section{width:100%;height:100%;overflow:hidden;} .section-con{width:100%;height:
     .foot-link-III span {font-size:4vw;}
     .linethrough{margin-bottom: 3px;}
     .navright {display: none;}
-    .menu-icon {display: block;}
 }
 
 @media (orientation:landscape){
@@ -83,9 +82,9 @@ section{width:100%;height:100%;overflow:hidden;} .section-con{width:100%;height:
     .foot-link{flex-direction:row;}
 }
 
-@media (min-width:1024px){
+@media (max-width:1080px){
     body{font-size:0.9rem;}
-    .main-copy-wrap{font-size:12rem;}
+    .main-copy-wrap{font-size:6rem;}
     .main-key-wrap{font-size:2.7rem;}
     .main-con-wrap{font-size:4rem;}
     .team-copy1-wrap,.team-copy2-wrap,.team-copy3-wrap{font-size:9rem;}
