@@ -15,7 +15,7 @@ body{margin:0;padding:0;overflow-x:hidden;font-family:'Ayres', 'NewYork', "PP Ne
 section{width:100%;height:100%;overflow:hidden;} .section-con{width:100%;height:100%;display:flex; /*flex-direction:column;*/ align-items:center; justify-content:center; overflow-x:hidden;} 
 .section-inner{width:90%;max-width:1200px;}.section-inner-con{font-size:2rem; width:100%;margin:0rem 0;} .section-inner-con p{margin:0.7rem 0;} 
 .section-I {height:fit-content; position: absolute; top:5%;} .section-con{width:100%;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:flex-start;overflow-x:hidden;} .section-inner{width:90%;max-width:1200px;}.section-inner-con{width:100%;margin:0.7rem 0;} .section-inner-con p{margin:0.7rem 0;}
-.main-copy{display:flex; position: absolute; top: 10%; left: 0%; width: 100vw; overflow: hidden; white-space:nowrap;overflow:hidden;z-index:1;} .main-copy-wrap{font-weight:100;color:#000;font-family:'Old London','Blackout','Times New Roman';font-size:8rem;letter-spacing:0;line-height:1em;padding-right:0.3em;animation:textLoop 24s linear infinite;min-width:100px;min-height:50px;flex-shrink:0; overflow: hidden;}
+.main-copy{display:flex; width: 100vw; overflow: hidden; white-space:nowrap;overflow:hidden;z-index:1;padding-top:3rem;margin-top:50px;} .main-copy-wrap{font-weight:100;color:#000;font-family:'Old London','Blackout','Times New Roman';font-size:8rem;letter-spacing:0;line-height:1em;padding-right:0.3em;animation:textLoop 24s linear infinite;min-width:100px;min-height:50px;flex-shrink:0; overflow: hidden;}
 @keyframes textLoop{from{transform:translateX(0%);}to{transform:translateX(-100%);}}
 .main-key-wrap{font-size:1.6rem;line-height:1.2em;}.main-con-wrap{font-size:2rem;line-height:1.2em;}
 
@@ -35,8 +35,8 @@ section{width:100%;height:100%;overflow:hidden;} .section-con{width:100%;height:
 
 .t-bold{font-weight:100;} .t-normal{font-weight:50;} .t-left{text-align:left;} .t-right{text-align:right;} .t-center{text-align:center; width: 100vw; text-transform:lowercase;} .t-center p{text-transform:lowercase;} .s-tit{padding:0.3em 0; /*padding-bottom: 5%;*/} a{text-decoration: none;}
 .t-stroke-x{font-size:3vh;color:#000;letter-spacing:4px;text-transform: uppercase;} 
-.t-stroke-white{font-size: 10vh; color: transparent; -webkit-text-stroke: 3px #000; /* Stroke width and color  text-shadow:-3px -3px 0 #000, 3px -3px 0 #000, -3px  3px 0 #000, 3px  3px 0 #000;*/ letter-spacing: 4px; text-transform: uppercase;}
-.t-stroke-black{font-size:10vh;color:#000;letter-spacing:4px;text-transform: uppercase;} 
+.t-stroke-white{font-size: 15vh; color: transparent; -webkit-text-stroke: 3px #000; /* Stroke width and color  text-shadow:-3px -3px 0 #000, 3px -3px 0 #000, -3px  3px 0 #000, 3px  3px 0 #000;*/ letter-spacing: 4px; text-transform: uppercase;}
+.t-stroke-black{font-size:15vh;color:#000;letter-spacing:4px;text-transform: uppercase;} 
 
 @font-face{font-family:'Old London';src:url('Media/Olondona.otf') format('opentype');font-display:swap;}
 @font-face{font-family:'Gracheva';src:url('Media/Gracheva.otf') format('opentype');font-display:swap;}
@@ -72,7 +72,7 @@ svg{font-size: 1.5rem;}
     .foot-link{flex-direction:row;}
 }
 
-@media (max-width:1080px){
+@media screen and (min-device-height: 720px) and (max-device-width: 1440px){
     body{font-size:0.9rem;}
     .t-left{font-size: 1.5vw; } .t-right{font-size: 1.5vw; }
     .main-copy-wrap{font-size:4rem;}
