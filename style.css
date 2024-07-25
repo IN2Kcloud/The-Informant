@@ -22,7 +22,7 @@ section{width:100%;height:100%;overflow:hidden;} .section-con{width:100%;height:
 .section-1 {height: 5vh; position:absolute; top: 100vh; background-color: #FFB703; display:flex; align-items: center; z-index: 11; overflow:hidden;} 
 .section-2 {display:flex;justify-content:center; align-items: center; height:10vh; margin-top: 5vh; position:absolute; bottom: 2%; z-index: 11;}
 
-.team-copy{height: fit-content; margin-top:40vh;margin-bottom:10vh;margin-right: 0px;margin-left: 0px; overflow: hidden;} .team-copy0,.team-copy1,.team-copy2,.team-copy3{display:flex; align-items: center; white-space:nowrap; overflow:hidden;} .team-copy0-wrap,.team-copy1-wrap,.team-copy2-wrap,.team-copy3-wrap{font-family: 'Narnia', 'NewYork', 'Gracheva'; font-size:5rem;display: flex; align-items: center; letter-spacing:2px;line-height:11vh;padding-right:0.3em;margin:-0.3rem 0;}
+.team-copy{height: fit-content; margin-top:40vh;margin-bottom:40vh;margin-right: 0px;margin-left: 0px; overflow: hidden;} .team-copy0,.team-copy1,.team-copy2,.team-copy3{display:flex; align-items: center; white-space:nowrap; overflow:hidden;} .team-copy0-wrap,.team-copy1-wrap,.team-copy2-wrap,.team-copy3-wrap{font-family: 'Narnia', 'NewYork', 'Gracheva'; font-size:5rem;display: flex; align-items: center; letter-spacing:2px;line-height:11vh;padding-right:0.3em;margin:-0.3rem 0;}
 .team-copy0-wrap{height: 5vh; display: flex; align-items: center;}
 .team-copy0-wrap{animation:subLoop0 30s linear infinite;}
 .team-copy1-wrap{animation:subLoop1 16s linear infinite;}
@@ -86,7 +86,7 @@ svg{font-size: 1.5rem;}
 @media (orientation:portrait){
     #nav a{font-size: 6vw;font-weight: 300;}   
     .section-con{height:fit-content;}
-    .section-1 {height:6vh; margin-top: 10vh; top:8%;}
+    .section-1 {height:6vh; top: 100vh;}
     .section-inner-II{align-items: center;}
     .t-left{font-size: 5vw; } .t-right{font-size: 5vw; } .t-center{font-size: 4vw; }
     .team-copy{margin-right: 0px;margin-left: 0px;}
