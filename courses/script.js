@@ -75,28 +75,102 @@ function isDesktop() {
 }
 
 document.addEventListener("DOMContentLoaded", function () {
-  const imageSources = [
-    "./assets/img1.jpg",
-    "./assets/img2.jpg",
-    "./assets/img3.jpg",
-    "./assets/img4.jpg",
-    "./assets/img5.jpg",
+  const services = [
+    {
+      info: "Video Production",
+      name: "Video Production",
+      tag: "Video Production",
+      imageSrc: "./assets/img1.jpg"
+    },
+    {
+      info: "Graphic Design",
+      name: "Graphic Design",
+      tag: "Graphic Design",
+      imageSrc: "./assets/img2.jpg"
+    },
+    {
+      info: "Digital Marketing",
+      name: "Digital Marketing",
+      tag: "Digital Marketing",
+      imageSrc: "./assets/img3.jpg"
+    },
+    {
+      info: "Video Production",
+      name: "Video Production",
+      tag: "Video Production",
+      imageSrc: "./assets/img4.jpg"
+    },
+    {
+      info: "Graphic Design",
+      name: "Graphic Design",
+      tag: "Graphic Design",
+      imageSrc: "./assets/img5.jpg"
+    },
+    {
+      info: "Digital Marketing",
+      name: "Digital Marketing",
+      tag: "Digital Marketing",
+      imageSrc: "./assets/img6.jpg"
+    },
+    {
+      info: "Video Production",
+      name: "Video Production",
+      tag: "Video Production",
+      imageSrc: "./assets/img7.jpg"
+    },
+    {
+      info: "Graphic Design",
+      name: "Graphic Design",
+      tag: "Graphic Design",
+      imageSrc: "./assets/img8.jpg"
+    },
+    {
+      info: "Digital Marketing",
+      name: "Digital Marketing",
+      tag: "Digital Marketing",
+      imageSrc: "./assets/img9.jpg"
+    }
+    // Add as many services as you want here
   ];
 
-  const menuItems = document.querySelectorAll(".menu-item");
+  const menu = document.querySelector(".menu");
 
-  menuItems.forEach((item) => {
-    const copyElements = item.querySelectorAll(".info, .name, .tag");
+  // Function to create and add new menu items
+  const addMenuItems = () => {
+    services.forEach((service, index) => {
+      const menuItem = document.createElement("div");
+      menuItem.classList.add("menu-item");
 
-    copyElements.forEach((div) => {
-      const copy = div.querySelector("p");
-      if (copy) {
-        const duplicateCopy = document.createElement("p");
-        duplicateCopy.textContent = copy.textContent;
-        div.appendChild(duplicateCopy);
-      }
+      menuItem.innerHTML = `
+        <div class="info"><p>${service.info}</p></div>
+        <div class="name"><p>${service.name}</p></div>
+        <div class="tag"><p>${service.tag}</p></div>
+      `;
+
+      menu.appendChild(menuItem);
+
+      // Duplicate content for animation purposes
+      const copyElements = menuItem.querySelectorAll(".info, .name, .tag");
+      copyElements.forEach((div) => {
+        const copy = div.querySelector("p");
+        if (copy) {
+          const duplicateCopy = document.createElement("p");
+          duplicateCopy.textContent = copy.textContent;
+          div.appendChild(duplicateCopy);
+        }
+      });
+
+      // Add hover and animation functionality
+      menuItem.addEventListener("mouseover", () => {
+        mouseOverAnimation(menuItem);
+        appendImages(service.imageSrc);
+      });
+
+      menuItem.addEventListener("mouseout", () => {
+        mouseOutAnimation(menuItem);
+      });
     });
-  });
+  };
 
   const appendImages = (src) => {
     const preview1 = document.querySelector(".preview-img-1");
@@ -124,23 +198,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   };
 
-  function removeExtraImages(container) {
-    while (container.children.length > 10) {
-      container.removeChild(container.firstChild);
-    }
-  }
-
-  document.querySelectorAll(".menu-item").forEach((item, index) => {
-    item.addEventListener("mouseover", () => {
-      mouseOverAnimation(item);
-      appendImages(imageSources[index]);
-    });
-
-    item.addEventListener("mouseout", () => {
-      mouseOutAnimation(item);
-    });
-  });
-
   const mouseOverAnimation = (elem) => {
     gsap.to(elem.querySelectorAll("p:nth-child(1)"), {
       top: "-100%",
@@ -163,14 +220,10 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   };
 
-  document.querySelector(".menu").addEventListener("mouseout", function () {
-    gsap.to(".preview-img img", {
-      clipPath: "polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)",
-      duration: 1,
-      ease: "power3.out",
-    });
-  });
+  // Initialize menu items
+  addMenuItems();
 
+  // Move the preview box with the mouse
   document.addEventListener("mousemove", function (e) {
     const preview = document.querySelector(".preview");
     gsap.to(preview, {
@@ -180,4 +233,19 @@ document.addEventListener("DOMContentLoaded", function () {
       ease: "power3.out",
     });
   });
+
+  document.querySelector(".menu").addEventListener("mouseout", function () {
+    gsap.to(".preview-img img", {
+      clipPath: "polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)",
+      duration: 1,
+      ease: "power3.out",
+    });
+  });
+
+  function removeExtraImages(container) {
+    while (container.children.length > 10) {
+      container.removeChild(container.firstChild);
+    }
+  }
+  
 });
