@@ -4,7 +4,7 @@
   box-sizing: border-box;
 }
 
-html {
+html, body {
   width: 100vw;
   overflow-x: hidden;
 }
@@ -31,7 +31,7 @@ img {
 
 .menu {
   width: 100%;
-  margin: 17.5em 0;
+  margin: 10em 0;
 }
 
 .menu-item {
@@ -119,6 +119,9 @@ p {
 }
 
 @media (orientation:portrait){
+  .circleII{display: none;}
+  .menu { margin: 5em 0; }
+  .menu-item { padding: 1em 1em; }
   .name { flex: 4; height: 30px; font-size: 15px; text-align: center; }
   .info, .tag { flex: 1; height: 20px; font-size: 10px; }
   /*.menu-item { flex-direction: column; }*/
